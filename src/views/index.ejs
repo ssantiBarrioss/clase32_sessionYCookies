@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+   <form action="/users/saludo" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" name="name" placeholder="Nombre">
+    
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Ingrese su email">
+    
+    <label for="color">Seleccione su color:</label>
+    <select name="color" id="color">
+      <option value="">Elegi</option>
+      <option value="blue">Blue</option>
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="orange">Orange</option>
+      <option value="green">Green</option>
+    </select>
+    
+    <label for="age">Edad:</label>
+    <input type="text" name="age" placeholder="Ingrese su edad:">
+
+    <button type="submit">Enviar</button>
+   </form>
+  </body>
+</html>
