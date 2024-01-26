@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
+const cookieValidator = require('./middlewares/cookieValidator')
 
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -23,10 +23,11 @@ app.use(session({
   secret:'clase32',
   resave: false,
   saveUninitialized: true,
-}))
+}));
+app.use(cookieValidator)
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+app.use('/', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

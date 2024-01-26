@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
 </head>
-<body>
-    hola perra
+<body style="background-color: <%= user.color%>">
+    <h1>Gracias por visitarnos <%= user.name %>!</h1>
+    <a href="/logout">Olvidar Color</a>
 </body>
 </html>
